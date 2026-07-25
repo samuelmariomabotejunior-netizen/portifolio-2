@@ -1,0 +1,155 @@
+@import "variables";
+a{
+    text-decoration: none;
+}
+@for $i from 1 through 16{
+    .pl{
+        &-#{$i}{
+            padding-left: $i*0.5rem;
+        }
+    }
+    .pr{
+        &-#{$i}{
+            padding-right: $i*0.5rem;
+        }
+    }
+    .pt{
+        &-#{$i}{
+            padding-top: $i*0.5rem;
+        }
+    }
+    .pb{
+        &-#{$i}{
+            padding-bottom: $i*0.5rem;
+        }
+    }
+    .ml{
+        &-#{$i}{
+            margin-left: $i*0.5rem;
+        }
+    }
+    .mr{
+        &-#{$i}{
+            margin-right: $i*0.5rem;
+        }
+    }
+    .mt{
+        &-#{$i}{
+            margin-top: $i*0.5rem;
+        }
+    }
+    .mb{
+        &-#{$i}{
+            margin-bottom: $i*0.5rem;
+        }
+    }
+    .p{
+        &-#{$i}{
+            padding-block: $i*0.5rem;
+        }
+    }
+    .m{
+        &-#{$i}{
+            margin-block: $i*0.5rem;
+        }
+    }
+}
+.title-principal{
+    font-size: 3rem;
+    color: $text;
+}
+p{
+    line-height: 1.7;
+}
+.title-mob{
+    span{
+        font-size: 2rem;
+    }
+    padding-block: 0.5rem;
+    color: $text;
+    h2{
+        margin-bottom: 0.5rem;
+    }
+    
+}
+.btn{
+    width: 95%;
+    border-radius: 5px; 
+    padding: 0.6rem;
+    background-color: $text-muted;
+    border: $bg-alt solid 1px;
+    color: $bg;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    &:hover{
+        background-color: $accent;
+        color: $bg;
+    }
+}
+a:focus-visible,
+.btn:focus-visible {
+    outline: 2px solid $accent;
+    outline-offset: 2px;
+}
+@media (max-width: 767px){
+    .title-principal{
+        font-size: 2rem;
+    }
+    .title-mob{
+        span{
+            font-size: 1.5rem;
+        }
+    }
+}
+@media (max-width: 480px){
+    .title-principal{
+        font-size: 1.5rem;
+    }
+    .title-mob{
+        span{
+            font-size: 1rem;
+        }
+    }
+}
+.footer-mob{
+    text-align: center;
+    background-color: $bg-alt;
+    color: $text;
+    width: 100%;
+    padding-block: 1.5rem;
+    bottom: 0;
+    left: 0;
+    padding: 2rem;
+}
+.footer-desktop{
+    text-align: center;
+}
+.container-1{
+    margin-inline: auto;
+    max-width: 1280px;
+    padding-inline: 1rem;
+}
+.icon-logo{
+    font-size: 3rem;
+    color: $accent;
+}
+
+.title-nav{
+    font-size: 2rem;
+}
+ul{
+    list-style: none;
+}
+button{
+    cursor: pointer;
+    border: none;
+}
+@media (max-width: 767px){
+    .icon-logo{
+        font-size: 2.5rem;
+    }
+
+    .title-nav{
+        font-size: 1.8rem;
+    }
+}

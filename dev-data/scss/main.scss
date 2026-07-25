@@ -1,0 +1,79 @@
+@import "sidebar-section"; 
+@import "utilitaries-class"; 
+@import "variables"; 
+@import "main-section"; 
+@import "project-section"; 
+@import "skills-section"; 
+@import "contact-section"; 
+@import "nav-mob"; 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 2rem;
+    padding-inline: 1rem;
+    max-width: 1280px;
+    margin-inline: auto;
+
+}
+
+body{
+    background-color: $bg;
+    color: $text-muted;
+    font-family: "Space Grotesk", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .title-principal, .title-mob {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+}
+
+header.sidebar nav .navbar a,
+main #formaction .box-info .date {
+    font-family: "JetBrains Mono", monospace;
+}
+@media (max-width: 1160px){
+    .container{
+        grid-template-columns: 1fr;
+    }
+}
+.footer-mob{
+    display: none;
+    max-width: 100%;
+    padding: 1rem;
+    text-align: center;
+    
+}
+@media (max-width: 1100px){
+    .footer-mob{
+        display: block;
+    }
+}
+main{
+    .footer-desktop{
+        display: block; 
+    }
+}
+
+
+@media (max-width: 1160px){
+    .container{
+        grid-template-columns: 1fr;
+    }
+    main{
+        .footer-desktop{
+            display: none; // esconde ao trocar pra layout de 1 coluna
+        }
+    }
+    .footer-mob{
+        display: block; // mostra o footer mobile no mesmo breakpoint
+    }
+}

@@ -1,0 +1,88 @@
+@import "variables";
+main{
+    padding: 1rem;
+    #about{
+        margin-bottom: 3.5rem;
+        p{
+            padding-bottom: 1rem;
+            strong{
+                color: $text;
+            }
+        }
+    }
+    #formaction{
+        .box-info{
+            display: grid;
+            grid-template-columns: 20% 80%;
+            padding-block: 1rem;
+            gap: 1rem;
+            padding: 1rem;
+            cursor: pointer;
+            div{
+                h3{
+                    color: $text;
+                }
+            }
+            &:hover{
+                background-color: $bg-alt;
+                border-radius: 10px;
+                div{
+                    h3{
+                        color: $accent;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 580px){
+    main{
+        #formaction{
+            .box-info{
+                display: flex;
+                flex-direction: column;
+                max-width: fit-content;
+            }
+        }
+    }
+}
+@media (max-width: 480px){
+    main{
+        #about{
+            width: 350px;
+        }
+        #formaction{
+            .box-info{
+                //min-width: 300px;
+                max-width: 320px;
+                //margin-inline: auto;
+            }
+        }
+    }
+}
+@media (max-width: 400px){
+    main{
+        #about{
+            width: 300px;
+        }
+         #formaction{
+            .box-info{
+                max-width: 300px;
+            }
+        }
+
+    }
+}
+@media (max-width: 380px){
+    main{
+        #about{
+            width: 280px;
+        }
+         #formaction{
+            .box-info{
+                max-width: 280px;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,95 @@
+@import "variables";
+main{
+    #skills{
+        margin-block: 3.5rem;
+        .skills{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            div{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 0.75rem;
+                padding: 1.5rem 1rem;
+                background-color: #1e293b; 
+                border: #334155 solid 1px;
+                cursor: pointer;
+                border-radius: 10px;
+                transition: border-color 0.3s ease, transform 0.3s ease;
+                &:hover{
+                    border-color: #64ffda;
+                    transform: translateY(-4px);
+                }
+                span{
+                    color: $accent;
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    order: 2;
+                }
+            }
+            
+            img{
+                width: 70px;
+                height: 70px;
+                object-fit: contain; 
+                order: 1;
+            }
+        }
+        
+    }
+    #contact{
+        padding-block: 1rem;
+        .text-center{
+            text-align: center;
+        }
+
+        a{
+            color: $text;
+            display: block;
+        }
+    }
+}
+@media (max-width: 767px){
+    main{
+        #skills{  
+            .skills{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+    }
+}
+@media (max-width: 480px){
+    main{
+        #skills{  
+            .skills{
+                grid-template-columns: repeat(1, 1fr);
+                max-width: 380px; 
+
+            }
+        }
+    }
+}
+@media (max-width: 450px){
+    main{
+        #skills{ 
+            .skills{
+                max-width: 290px; 
+                margin-inline: auto;
+            }
+        }
+    }
+}
+@media (max-width: 400px){
+    main{
+        #skills{ 
+            .skills{
+                max-width: 300px; 
+                margin-inline: unset;
+            }
+        }
+    }
+}

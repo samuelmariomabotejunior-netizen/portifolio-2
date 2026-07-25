@@ -1,0 +1,163 @@
+@import "Variables";
+nav.navbar-mob{
+    margin-inline: 2rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    display: none;
+    .container-1{
+        .content{
+            background-color: lighten($bg, 7);
+            color: $text;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logo{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                gap: 1rem;
+                .icon-logo{
+                    left: 0;
+                    background-color: $accent;
+
+                    .fa-code{
+                        color: $bg;
+                    }
+                }
+                h1{
+                    color: $text;
+                }
+            }
+            .navbar-mob{
+                ul{
+                    list-style: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                   li{
+                        padding-inline: 1rem;
+                        text-transform: uppercase;
+                        transition: all 0.4s ease;
+                        &:hover{
+                            transform: translateY(-5px);
+                        }
+
+                        a{
+                            color: $text;
+                            transition: all 0.4s ease;
+                            &:hover{
+                                //text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+            button{
+                background-color: $accent;
+                color: $bg;
+                font-size: 3rem;
+                .fa-xmark{
+                    display: none;
+                }
+            } 
+
+        }
+    }
+}
+@media (max-width: 1160px){
+    nav.navbar-mob{
+        display: unset;
+    }
+}
+@media (max-width: 900px){
+    nav.navbar-mob{
+        margin-inline: 0rem;
+        right: 0;
+        .container-1{
+            padding-inline: 0;
+            
+        }
+    }
+}
+@media (max-width: 840px){
+    nav.navbar-mob{
+        .container-1{
+            .content{
+                .logo{
+                    gap: 0.5rem;
+                }
+                .navbar-mob{
+                    ul{
+                        li{
+                            padding-inline: 0.5rem;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}
+@media (max-width: 767px){
+    nav.navbar-mob{
+        &.show{
+            .container-1{
+                .content{
+                    .navbar-mob{
+                        ul{
+                            display: flex;
+                            
+                        }
+                    }
+                    button{
+                        .fa-xmark{
+                            display: unset;
+                        }
+                        .fa-bars{
+                            display: none;
+                        }
+                    }
+
+                }
+                
+            }
+        }
+    
+        .container-1{
+            .content{
+                .navbar-mob{
+                    ul{
+                        display: none;
+                        left: 0;
+                        position: absolute;
+                        width: 100%;
+                        background-color: lighten($bg-alt, 4);
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        padding-block: 1rem;
+                        li{
+                            padding-block: 1rem;
+                        }
+                        margin-top: 1.56rem;
+                        transform: rotatey(0deg);
+                        transition: all 0.2s ease;
+                    }
+                    
+                }
+                button{
+                    font-size: 2.5rem;
+                    .fa-xmark{
+                        display: none;
+                    }
+                }
+
+            }
+            
+        }
+    }
+}

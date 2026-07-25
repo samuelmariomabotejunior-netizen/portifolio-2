@@ -1,0 +1,100 @@
+@import "variables";
+section#contact{
+    form{
+        display: flex;
+        flex-direction: column;
+        margin-block: 1rem;
+        input, textarea{
+            padding: 0.4rem;
+            width: 95%;
+            margin-bottom: 1rem;
+            background-color: $bg-alt;
+            border: none;
+            color: $text;
+            border: $text-muted solid 1px;
+            border-radius: 5px;
+            outline: none;
+            &::placeholder{
+                color: $text;
+                background-color: transparent;
+            }
+            &:focus{
+                border-color: $accent;
+            }
+        }
+    }
+    .cards-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-inline: auto;
+        max-width: 500px;
+
+        .card {
+            display: flex;
+            justify-content: flex-start; // ícone e texto lado a lado, alinhados
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+
+            .icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 3rem;
+                cursor: pointer;
+                flex-shrink: 0; // evita que o ícone encolha
+                &:hover {
+                    color: $accent;
+                }
+            }
+
+            .description {
+                display: flex;
+                flex-direction: column;
+                padding: 1rem;
+                text-align: left;
+            }
+        }
+    }
+}
+@media (max-width: 1160px){
+    section#contact{
+        form{
+            margin: auto;
+            max-width: 800px;
+            padding-block: 1rem;
+        }
+    }
+}
+@media (max-width: 460px){
+    section#contact{
+        form{
+            margin: 0;
+            max-width: 380px;
+            padding-block: 1rem;
+        }
+    }
+}
+@media (max-width: 400px){
+    section#contact{
+        form{
+            max-width: 300px;
+            padding-block: 1rem;
+        }
+    }
+}
+@media (max-width: 1010px){
+    section#contact{
+        .cards-wrapper{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-inline: auto;
+            width: unset;
+            max-width: 500px;
+        }
+    }
+}
