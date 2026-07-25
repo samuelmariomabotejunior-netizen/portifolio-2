@@ -221,8 +221,11 @@
                         Preencha o formulário abaixo e responderei o mais breve possível.
                     </p>
 
-                    <form name="contato-portifólio" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+                    <form name="contato-principal" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
                         <input type="hidden" name="form-name" value="contato-principal">
+                        <p class="hidden" style="display:none">
+                            <label>Não preencha este campo: <input name="bot-field"></label>
+                        </p>
                         <input type="text" name="name" id="name" placeholder="Seu Nome" required>
                         <input type="email" name="email" id="email" placeholder="Seu Email" required>
                         <input type="tel" name="phone" id="phone" placeholder="Seu Telefone">

@@ -1,8 +1,10 @@
 @import "variables";
 main{
-    padding: 1rem;
+    //padding: 1rem;
+    //margin-inline: auto;
     #about{
         margin-bottom: 3.5rem;
+        margin-inline: auto;
         p{
             padding-bottom: 1rem;
             strong{
@@ -11,24 +13,28 @@ main{
         }
     }
     #formaction{
-        .box-info{
-            display: grid;
-            grid-template-columns: 20% 80%;
-            padding-block: 1rem;
-            gap: 1rem;
-            padding: 1rem;
-            cursor: pointer;
-            div{
-                h3{
-                    color: $text;
-                }
-            }
-            &:hover{
-                background-color: $bg-alt;
-                border-radius: 10px;
+        .my-formaction{
+            margin-inline: auto;
+            .box-info{
+                margin-inline: auto;
+                display: grid;
+                grid-template-columns: 20% 80%;
+                padding-block: 1rem;
+                gap: 1rem;
+                //padding: 1rem;
+                cursor: pointer;
                 div{
                     h3{
-                        color: $accent;
+                        color: $text;
+                    }
+                }
+                &:hover{
+                    background-color: $bg-alt;
+                    border-radius: 10px;
+                    div{
+                        h3{
+                            color: $accent;
+                        }
                     }
                 }
             }
@@ -38,10 +44,12 @@ main{
 @media (max-width: 580px){
     main{
         #formaction{
-            .box-info{
-                display: flex;
-                flex-direction: column;
-                max-width: fit-content;
+            .my-formaction{
+                .box-info{
+                    display: flex;
+                    flex-direction: column;
+                    max-width: fit-content;
+                }
             }
         }
     }
@@ -52,12 +60,14 @@ main{
             width: 350px;
         }
         #formaction{
-            .box-info{
-                //min-width: 300px;
-                max-width: 320px;
-                //margin-inline: auto;
-            }
-        }
+            .my-formaction{
+                .box-info{
+                    //min-width: 300px;
+                    max-width: 320px;
+                    //margin-inline: auto;
+                    }    
+                }
+        }   
     }
 }
 @media (max-width: 400px){
@@ -66,8 +76,10 @@ main{
             width: 300px;
         }
          #formaction{
-            .box-info{
-                max-width: 300px;
+            .my-formaction{
+                .box-info{
+                    max-width: 300px;
+                }    
             }
         }
 
@@ -79,8 +91,10 @@ main{
             width: 280px;
         }
          #formaction{
-            .box-info{
-                max-width: 280px;
+            .my-formaction{
+                .box-info{
+                    max-width: 280px;
+                }
             }
         }
 

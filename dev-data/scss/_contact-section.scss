@@ -1,12 +1,14 @@
 @import "variables";
 section#contact{
+    //margin-inline: auto;
     form{
         display: flex;
         flex-direction: column;
         margin-block: 1rem;
+        //margin-inline: auto;
         input, textarea{
             padding: 0.4rem;
-            width: 95%;
+            width: 100%;
             margin-bottom: 1rem;
             background-color: $bg-alt;
             border: none;
@@ -51,7 +53,7 @@ section#contact{
             .description {
                 display: flex;
                 flex-direction: column;
-                padding: 1rem;
+                //padding: 1rem;
                 text-align: left;
             }
         }
@@ -69,6 +71,7 @@ section#contact{
 @media (max-width: 460px){
     section#contact{
         form{
+            margin: auto;
             margin: 0;
             max-width: 380px;
             padding-block: 1rem;
@@ -77,9 +80,24 @@ section#contact{
 }
 @media (max-width: 400px){
     section#contact{
+        margin-inline: auto;
         form{
             max-width: 300px;
             padding-block: 1rem;
+            margin: auto;
+        }
+        .cards-wrapper{
+            .card{
+                flex-direction: column;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                .description{
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                }
+            }
         }
     }
 }

@@ -1,7 +1,10 @@
 @import "variables";
 main{
+    margin-inline: auto;
     #skills{
+
         margin-block: 3.5rem;
+        margin: auto;
         .skills{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -68,6 +71,7 @@ main{
             .skills{
                 grid-template-columns: repeat(1, 1fr);
                 max-width: 380px; 
+                margin: auto;
 
             }
         }
@@ -76,9 +80,10 @@ main{
 @media (max-width: 450px){
     main{
         #skills{ 
+            margin: auto;
             .skills{
                 max-width: 290px; 
-                margin-inline: auto;
+                margin: auto;
             }
         }
     }
@@ -88,7 +93,7 @@ main{
         #skills{ 
             .skills{
                 max-width: 300px; 
-                margin-inline: unset;
+                margin: auto;
             }
         }
     }

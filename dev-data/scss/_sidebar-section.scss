@@ -8,6 +8,7 @@ header.sidebar{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-inline: auto;
 
     img{
         top: 0;
@@ -124,7 +125,8 @@ header.sidebar{
 }
 @media (max-width: 390px){
     header.sidebar{
-        padding-top: 11rem;
+        padding-top: 8rem;
+        padding-bottom: 6rem;
         max-width: 300px;
     }
 }

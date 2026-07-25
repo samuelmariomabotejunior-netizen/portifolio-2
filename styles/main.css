@@ -13,6 +13,7 @@ header.sidebar {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-inline: auto;
 }
 header.sidebar img {
   top: 0;
@@ -118,7 +119,8 @@ header.sidebar a:hover {
 }
 @media (max-width: 390px) {
   header.sidebar {
-    padding-top: 11rem;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
     max-width: 300px;
   }
 }
@@ -793,7 +795,7 @@ p {
 }
 
 .btn {
-  width: 95%;
+  width: 100%;
   border-radius: 5px;
   padding: 0.6rem;
   background-color: #94a3b8;
@@ -888,11 +890,9 @@ button {
 /* texto principal */
 /* texto secundário */
 /* verde-água — links, hover, destaques */
-main {
-  padding: 1rem;
-}
 main #about {
   margin-bottom: 3.5rem;
+  margin-inline: auto;
 }
 main #about p {
   padding-bottom: 1rem;
@@ -900,27 +900,30 @@ main #about p {
 main #about p strong {
   color: #e2e8f0;
 }
-main #formaction .box-info {
+main #formaction .my-formaction {
+  margin-inline: auto;
+}
+main #formaction .my-formaction .box-info {
+  margin-inline: auto;
   display: grid;
   grid-template-columns: 20% 80%;
   padding-block: 1rem;
   gap: 1rem;
-  padding: 1rem;
   cursor: pointer;
 }
-main #formaction .box-info div h3 {
+main #formaction .my-formaction .box-info div h3 {
   color: #e2e8f0;
 }
-main #formaction .box-info:hover {
+main #formaction .my-formaction .box-info:hover {
   background-color: #1e293b;
   border-radius: 10px;
 }
-main #formaction .box-info:hover div h3 {
+main #formaction .my-formaction .box-info:hover div h3 {
   color: #64ffda;
 }
 
 @media (max-width: 580px) {
-  main #formaction .box-info {
+  main #formaction .my-formaction .box-info {
     display: flex;
     flex-direction: column;
     max-width: fit-content;
@@ -930,7 +933,7 @@ main #formaction .box-info:hover div h3 {
   main #about {
     width: 350px;
   }
-  main #formaction .box-info {
+  main #formaction .my-formaction .box-info {
     max-width: 320px;
   }
 }
@@ -938,7 +941,7 @@ main #formaction .box-info:hover div h3 {
   main #about {
     width: 300px;
   }
-  main #formaction .box-info {
+  main #formaction .my-formaction .box-info {
     max-width: 300px;
   }
 }
@@ -946,7 +949,7 @@ main #formaction .box-info:hover div h3 {
   main #about {
     width: 280px;
   }
-  main #formaction .box-info {
+  main #formaction .my-formaction .box-info {
     max-width: 280px;
   }
 }
@@ -957,10 +960,11 @@ main #formaction .box-info:hover div h3 {
 /* texto secundário */
 /* verde-água — links, hover, destaques */
 main {
-  padding: 1rem;
+  margin-inline: auto;
 }
 main #projects {
   margin-bottom: 3.5rem;
+  margin-inline: auto;
 }
 main #projects p {
   padding-bottom: 1rem;
@@ -975,7 +979,6 @@ main .projects .project-item {
   padding: 1.5rem 1rem;
   color: #e2e8f0;
   cursor: pointer;
-  gap: 1rem;
   cursor: pointer;
   border-bottom: #1e293b solid 1px;
 }
@@ -1038,8 +1041,12 @@ main .projects .project-item:hover div h3 {
 /* texto principal */
 /* texto secundário */
 /* verde-água — links, hover, destaques */
+main {
+  margin-inline: auto;
+}
 main #skills {
   margin-block: 3.5rem;
+  margin: auto;
 }
 main #skills .skills {
   display: grid;
@@ -1097,18 +1104,22 @@ main #contact a {
   main #skills .skills {
     grid-template-columns: repeat(1, 1fr);
     max-width: 380px;
+    margin: auto;
   }
 }
 @media (max-width: 450px) {
+  main #skills {
+    margin: auto;
+  }
   main #skills .skills {
     max-width: 290px;
-    margin-inline: auto;
+    margin: auto;
   }
 }
 @media (max-width: 400px) {
   main #skills .skills {
     max-width: 300px;
-    margin-inline: unset;
+    margin: auto;
   }
 }
 /* fundo navy escuro */
@@ -1124,7 +1135,7 @@ section#contact form {
 }
 section#contact form input, section#contact form textarea {
   padding: 0.4rem;
-  width: 95%;
+  width: 100%;
   margin-bottom: 1rem;
   background-color: #1e293b;
   border: none;
@@ -1167,7 +1178,6 @@ section#contact .cards-wrapper .card .icon:hover {
 section#contact .cards-wrapper .card .description {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
   text-align: left;
 }
 
@@ -1180,15 +1190,31 @@ section#contact .cards-wrapper .card .description {
 }
 @media (max-width: 460px) {
   section#contact form {
+    margin: auto;
     margin: 0;
     max-width: 380px;
     padding-block: 1rem;
   }
 }
 @media (max-width: 400px) {
+  section#contact {
+    margin-inline: auto;
+  }
   section#contact form {
     max-width: 300px;
     padding-block: 1rem;
+    margin: auto;
+  }
+  section#contact .cards-wrapper .card {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  section#contact .cards-wrapper .card .description {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }
 @media (max-width: 1010px) {
@@ -1340,6 +1366,7 @@ nav.navbar-mob .container-1 .content button .fa-xmark {
   padding-inline: 1rem;
   max-width: 1280px;
   margin-inline: auto;
+  width: 100%;
 }
 
 body {
