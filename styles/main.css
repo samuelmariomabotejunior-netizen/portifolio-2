@@ -13,7 +13,6 @@ header.sidebar {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-inline: auto;
 }
 header.sidebar img {
   top: 0;
@@ -119,8 +118,8 @@ header.sidebar a:hover {
 }
 @media (max-width: 390px) {
   header.sidebar {
-    padding-top: 8rem;
-    padding-bottom: 6rem;
+    margin-top: 4rem;
+    padding-bottom: 8rem;
     max-width: 300px;
   }
 }
@@ -892,7 +891,6 @@ button {
 /* verde-água — links, hover, destaques */
 main #about {
   margin-bottom: 3.5rem;
-  margin-inline: auto;
 }
 main #about p {
   padding-bottom: 1rem;
@@ -900,15 +898,11 @@ main #about p {
 main #about p strong {
   color: #e2e8f0;
 }
-main #formaction .my-formaction {
-  margin-inline: auto;
-}
 main #formaction .my-formaction .box-info {
   margin-inline: auto;
   display: grid;
   grid-template-columns: 20% 80%;
-  padding-block: 1rem;
-  gap: 1rem;
+  padding: 1rem;
   cursor: pointer;
 }
 main #formaction .my-formaction .box-info div h3 {
